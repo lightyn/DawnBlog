@@ -1,0 +1,63 @@
+﻿body {
+	background-color: #f6eade;
+	font-family: 'Josefin Sans' , sans-serif;
+	font-size: 1.7em;
+}
+
+h1 {
+	font-family: 'Give You Glory', cursive;
+}
+
+h2, h3, h4 {
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 600;
+}
+
+h4 {
+	font-size:1.8em;
+}
+
+h2 {
+	font-size: 
+}
+.navbar-inverse .navbar-nav > li > a, .navbar-collapse, .navbar li, .navbar-inverse, .navbar-inverse .navbar-brand {
+	color: #f8be67;
+	background-color: #341b1d;
+}
+
+.navbar-nav {
+	padding: 1rem, 0rem, 1rem, 0rem;
+}
+
+.navbar-nav li:hover, .navbar-inverse .navbar-nav > li > a:hover {
+	background-color: #f8be67;
+	color: #341b1d;
+}
+
+a {
+	color: #573e4e;
+}
+
+a:hover, a:focus {
+	color: #341b1d;
+}
+
+.btn-default {
+	background-color: #573e4e;
+	color: #ab90a7;
+	border-color: #ab90a7;
+}
+
+.btn-default:hover {
+	background-color: #ab90a7;
+	color: #341b1d;
+}
+.navbar-inverse .navbar-brand {
+	font-family: 'Give You Glory', cursive;
+	font-size: 1.6em;
+	color: #f8be67;
+}
+
+.navbar-inverse .navbar-brand:hover {
+	color: #f8be67;
+}

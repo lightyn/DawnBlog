@@ -1,0 +1,49 @@
+﻿@model IEnumerable<DawnBlog.Models.BlogPost>
+
+@{
+    ViewBag.Title = "My Recent Posts";
+}
+
+<h2>Recent Posts</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>Edited</th>
+		<th>Post Body</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+		<td>
+			@Html.ActionLink(@Html.DisplayFor(modelItem => item.Title).ToString(),"View", new { id = item.BlogPost_Id })
+		</td>
+		<td>
+			@item.DateTime.ToString()
+		</td>
+			@if (item.Body.Length >= 300)
+			{
+				<td>
+					@item.Body.Substring(0, 300) (continued...)
+				</td>
+			}
+			else
+			{
+				<td>
+					@item.Body.Substring(0, item.Body.Length)
+				</td>
+			}
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.BlogPost_Id }) |
+            @Html.ActionLink("View", "View", new { id=item.BlogPost_Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.BlogPost_Id })
+        </td>
+    </tr>
+}
+
+</table>

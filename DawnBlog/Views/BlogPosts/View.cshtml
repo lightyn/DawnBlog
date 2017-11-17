@@ -1,0 +1,24 @@
+﻿@model DawnBlog.Models.BlogPost
+
+@* BlogPost Public Content View *@
+
+@{
+    ViewBag.Title = "View";
+}
+<br />
+<h2>@Html.DisplayFor(model=>model.Title)</h2>
+
+<div>
+    <hr />
+    <div class="row">
+        <div class="col-xs-12">
+            @Html.DisplayFor(model => model.Body)
+        </div>
+	</div>
+</div>
+<p>
+	<br />
+    @Html.ActionLink("Edit", "Edit", new { id = Model.BlogPost_Id }) |
+    @Html.ActionLink("Post Index", "Index") |
+	@Html.ActionLink("Return to Homepage", "Index", "Home")
+</p>

@@ -1,0 +1,30 @@
+﻿@model IEnumerable<DawnBlog.Models.BlogPost>
+
+@{
+    ViewBag.Title = "Home";
+}
+
+<div class="jumbotron col-xs-12">
+    <h1>Featured Content</h1>
+    <p class="lead">This is just the most super awesome blog site ever. Like... you just wouldn't believe.</p>
+</div>
+
+<div class="row">
+	@foreach (var item in Model)
+	{
+		<div class="col-lg-4 col-md-6 clearfix">
+			<h4>@Html.ActionLink(item.Title, "BlogPost", new { id = item.BlogPost_Id })</h4>
+			
+			Published: @item.DateTime.ToString()
+			<p>
+				@item.Body.Substring(0, 100) (continued...)
+			</p>
+			<p><a class="btn btn-default pull-right" href="@Url.Action("BlogPost", new { id = item.BlogPost_Id })">Read more &raquo;</a></p>
+		</div>
+	}
+</div>
+<div class="row">
+	<div class="col-md-4">
+		@Html.ActionLink("Create new post...", "NewPost")
+	</div>
+</div>
